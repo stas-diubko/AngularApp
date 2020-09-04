@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-// import { OverlayModule } from '@angular/cdk/overlay';
-// import { CdkTreeModule } from '@angular/cdk/tree';
-// import { PortalModule } from '@angular/cdk/portal';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CdkTreeModule } from '@angular/cdk/tree';
+import { PortalModule } from '@angular/cdk/portal';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
@@ -28,7 +28,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTreeModule } from '@angular/material/tree';
 
 const MODULES = [
-//   CdkTreeModule,
+  CdkTreeModule,
   MatAutocompleteModule,
   MatButtonModule,
   MatCardModule,
@@ -53,8 +53,8 @@ const MODULES = [
   MatFormFieldModule,
   MatButtonToggleModule,
   MatTreeModule,
-//   OverlayModule,
-//   PortalModule
+  OverlayModule,
+  PortalModule
 ];
 
 @NgModule({

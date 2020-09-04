@@ -1,17 +1,15 @@
 <div class="auth-wrap">
   <form>
-    <mat-form-field
-      class=""
-    >
-      <input
-        matInput
-        type="password"
-        placeholder="Password"
-        formControlName="password"
-      />
-      <mat-error >
-       
-      </mat-error>
+    <h3>Sign in</h3>
+    <mat-form-field class="auth-input">
+      <input matInput placeholder="Email" formControlName="email" />
+      <mat-error></mat-error>
     </mat-form-field>
+    <mat-form-field class="auth-input">
+      <input matInput type="password" placeholder="Password" formControlName="password" />
+      <mat-error></mat-error>
+    </mat-form-field>
+    <button mat-button color="primary">Sign in</button>
+    <p>Don't have an account? <span routerLink='/auth/sign-up'>Go to Sign up</span></p>
   </form>
 </div>

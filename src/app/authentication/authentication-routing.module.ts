@@ -18,7 +18,7 @@ const routes: Routes = [
     path: "sign-up",
     component: SignUpComponent,
   },
-  { path: "**", redirectTo: "" },
+  { path: "**", redirectTo: "sign-in" },
 ];
 
 export const AuthenticationRoutingModule = RouterModule.forChild(routes);

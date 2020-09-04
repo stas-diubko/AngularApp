@@ -1,0 +1,48 @@
+.auth-wrap {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  font-size: 18px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    h3 {
+      margin: 0;
+      color: rgb(128, 128, 128);
+      margin-bottom: 15px;
+    }
+
+    .auth-input {
+      width: 300px;
+      padding: 5px;
+      border-bottom: 1px solid rgb(211, 211, 211);
+      margin-bottom: 20px;
+      color: rgb(128, 128, 128);
+
+      .mat-form-field-appearance-fill .mat-form-field-flex {
+        padding: 0;
+      }
+    }
+
+    button {
+      width: 100px;
+      color: rgb(128, 128, 128);
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    p {
+      color: rgb(128, 128, 128);
+      font-size: 16px;
+
+      span {
+        font-weight: 600;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+  }
+}
