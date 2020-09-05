@@ -35,12 +35,12 @@ export class SignInComponent {
       password: this.loginForm.controls.password.value
     };
     this.authenticationService.signIn(loginData).subscribe((response: ResponseSignInAuthenticationView) => {
-      console.log(response);
+      localStorage.setItem('token', response.token);
     });
-  }
+  };
 
   private formValidation(): boolean {
     this.submitted = true;
     return this.loginForm.valid;
-  }
+  };
 }
