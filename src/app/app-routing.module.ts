@@ -10,6 +10,7 @@ const routes: Routes = [
         (m) => m.AuthenticationModule
       ),
   },
+  { path: "**", redirectTo: "auth" },
 ];
 
 @NgModule({

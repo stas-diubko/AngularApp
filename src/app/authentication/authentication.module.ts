@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import {MatAutocompleteModule} from '@angular/material/autocomplete';
-// import { MatInputModule, MatFormFieldModule, MatButtonModule, MatAutocompleteModule } from '@angular/material';
-// import { MatInputModule, MatFormFieldModule, MatButtonModule, MatAutocompleteModule } from '@angular/material';
 
 import { AuthenticationRoutingModule } from './authentication-routing.module';
 
@@ -10,19 +7,13 @@ import { AuthenticationComponent } from './authentication.component';
 import { SignInComponent } from './sign-In/sign-In.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { MaterialModule } from '../modules/material.modules';
+import { ReactiveFormsModule, FormsModule  } from '@angular/forms';
 
 const COMPONENTS = [
   SignInComponent,
   SignUpComponent,
   AuthenticationComponent
 ];
-
-// const MATERIAL = [
-//   MatInputModule,
-//   MatFormFieldModule,
-//   MatButtonModule,
-//   MatAutocompleteModule
-// ];
 
 @NgModule({
   declarations: [
@@ -31,8 +22,9 @@ const COMPONENTS = [
   imports: [
     CommonModule,
     AuthenticationRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     MaterialModule
-    // MATERIAL
   ]
 })
 export class AuthenticationModule { }
