@@ -10,6 +10,13 @@ const routes: Routes = [
         (m) => m.AuthenticationModule
       ),
   },
+  {
+    path: "workplace",
+    loadChildren: () =>
+      import("src/app/workplace/workplace.module").then(
+        (m) => m.WorkplaceModule
+      ),
+  },
   { path: "**", redirectTo: "auth" },
 ];
 
