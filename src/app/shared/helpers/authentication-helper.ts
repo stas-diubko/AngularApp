@@ -33,8 +33,8 @@ export class AuthenticationHelper {
     });
   };
 
-  isAuthenticatedRedirect(): void {
-    const isAuthenticate = this.isAuthenticated();
+  async isAuthenticatedRedirect(): Promise<void> {
+    const isAuthenticate = await this.isAuthenticated();
     if (isAuthenticate) this.router.navigate(["workplace"]);
   };
 };
