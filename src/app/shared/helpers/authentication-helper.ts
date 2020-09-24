@@ -37,4 +37,9 @@ export class AuthenticationHelper {
     const isAuthenticate = await this.isAuthenticated();
     if (isAuthenticate) this.router.navigate(["workplace"]);
   };
+
+  getToken(): string {
+    const token = localStorage.getItem("token");
+    return token;
+  }
 };
