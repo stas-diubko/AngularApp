@@ -4,6 +4,7 @@ import { PatternsConstants } from 'src/app/shared/constants/patterns.constants';
 import { AuthenticationService } from 'src/app/core/services/authentication.service';
 import { ResponseSignupAuthenticationView } from 'src/app/shared/models/authentication/response/response-signup-authentication.view copy';
 import { RequestSignupAuthenticationView } from 'src/app/shared/models/authentication/request/request-signup-authentication.view copy';
+import { AuthenticationHelper } from 'src/app/shared/helpers/authentication-helper';
 
 @Component({
   selector: 'app-sign-up',
@@ -16,10 +17,12 @@ export class SignUpComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthenticationService,
+    private authenticationHelper: AuthenticationHelper
   ) { 
     this.buildForm();
-  }
+    this.authenticationHelper.isAuthenticatedRedirect();
+  };
 
   private buildForm(): void {
     this.registrationForm = this.formBuilder.group({

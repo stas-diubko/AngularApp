@@ -1,8 +1,9 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { AuthenticationGuard } from './core/guards/authentication.guard';
 
 const routes: Routes = [
-  { path: "", redirectTo: "auth", pathMatch: "full" },
+  { path: "", redirectTo: "workplace", pathMatch: "full" },
   {
     path: "auth",
     loadChildren: () =>
@@ -12,6 +13,7 @@ const routes: Routes = [
   },
   {
     path: "workplace",
+    canActivate: [AuthenticationGuard],
     loadChildren: () =>
       import("src/app/workplace/workplace.module").then(
         (m) => m.WorkplaceModule
