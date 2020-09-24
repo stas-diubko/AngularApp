@@ -5,7 +5,6 @@ import { AuthenticationService } from 'src/app/core/services/authentication.serv
 import { ResponseSignInAuthenticationView } from 'src/app/shared/models/authentication/response/response-signin-authentication.view';
 import { RequestSignInAuthenticationView } from 'src/app/shared/models/authentication/request/request-signin-authentication.view';
 import { AuthenticationHelper } from 'src/app/shared/helpers/authentication-helper';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -17,7 +16,6 @@ export class SignInComponent {
   submitted: boolean = false;
 
   constructor(
-    private router: Router,
     private formBuilder: FormBuilder,
     private authenticationService: AuthenticationService,
     private authenticationHelper: AuthenticationHelper

@@ -17,6 +17,11 @@ export class AuthenticationHelper {
     this.router.navigate(["workplace"]);
   };
 
+  logout(): void {
+    localStorage.removeItem("token");
+    this.router.navigate(["auth"]);
+  };
+
   isAuthenticated(): Promise<boolean> {
     return new Promise((resolve) => {
       if (!this.tokenData) {

@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { WorkplaceComponent } from "./workplace.component";
 import { WorkplaceRoutingModule } from './worlplace-routing.module';
+import { MaterialModule } from '../modules/material.modules';
 
 const COMPONENTS = [
     WorkplaceComponent
@@ -13,7 +14,8 @@ const COMPONENTS = [
     ],
     imports: [
       CommonModule,
-      WorkplaceRoutingModule
+      WorkplaceRoutingModule,
+      MaterialModule
     ]
   })
   export class WorkplaceModule { }
