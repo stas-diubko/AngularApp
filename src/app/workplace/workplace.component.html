@@ -1,4 +1,11 @@
-<div>
-  <p>workplace works!</p>
-  <div><span class="material-icons" (click)="logout()"> exit_to_app </span></div>
+<div class="workplace-wrap">
+  <div class="workplace-header">
+    <div>
+      <span>{{userData.name}}&nbsp;</span>
+      <span>{{userData.surname}}</span>
+    </div>
+    <div>
+      <span class="material-icons" (click)="logout()"> exit_to_app </span>
+    </div>
+  </div>
 </div>

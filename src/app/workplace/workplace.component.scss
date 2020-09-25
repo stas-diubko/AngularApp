@@ -1,0 +1,12 @@
+.workplace-header {
+    display: flex;
+    padding: 15px 50px;
+    align-items: center;
+    justify-content: space-between;
+
+    div:nth-child(2) {
+        span {
+            cursor: pointer;
+        }
+    }
+}
