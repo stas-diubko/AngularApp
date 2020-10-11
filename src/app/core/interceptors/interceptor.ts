@@ -14,12 +14,16 @@ import {
 import {
   catchError
 } from "rxjs/operators";
+import { ToastrService } from 'ngx-toastr';
 
 import { AuthenticationHelper } from "src/app/shared/helpers/authentication-helper";
 
 @Injectable()
 export class Interceptor implements HttpInterceptor {
-  constructor(private authenticationHelper: AuthenticationHelper) {}
+  constructor(
+    private authenticationHelper: AuthenticationHelper,
+    private toastrService: ToastrService
+    ) {}
 
   intercept(request: HttpRequest<any>,  next: HttpHandler): Observable<HttpEvent<any>> {
     if (this.authenticationHelper.getToken()) {
@@ -36,6 +40,7 @@ export class Interceptor implements HttpInterceptor {
             this.authenticationHelper.logout();
           }
           else {
+            this.toastrService.error(error.error)
             return throwError(error);
           };
         })

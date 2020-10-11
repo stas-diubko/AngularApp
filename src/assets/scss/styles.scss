@@ -1,0 +1,21 @@
+@import "~ngx-toastr/toastr";
+
+.toast-container {
+    padding-top: 10px;
+}
+
+.toast-container .ngx-toastr {
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 6px;
+    padding: 15px 15px 15px 50px;
+    width: 300px;
+    border-radius: 15px !important;
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    box-shadow: 0 0 12px #999;
+    color: #fff;
+    border-image-slice: 10 !important;
+    background-color: #0303037d;
+  }
