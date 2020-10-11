@@ -5,6 +5,9 @@ import { WorkplaceRoutingModule } from './worlplace-routing.module';
 import { MaterialModule } from '../modules/material.modules';
 import { NoteComponent } from './note/note.component';
 import { AddNoteDialog } from './note/note.component';
+import { NgxEditorModule } from 'ngx-editor';
+import { FormsModule } from '@angular/forms';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 const COMPONENTS = [
     WorkplaceComponent
@@ -19,7 +22,10 @@ const COMPONENTS = [
     imports: [
       CommonModule,
       WorkplaceRoutingModule,
-      MaterialModule
+      MaterialModule,
+      NgxEditorModule,
+      FormsModule,
+      AngularEditorModule
     ],
     entryComponents: [ AddNoteDialog ]
 

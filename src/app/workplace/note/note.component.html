@@ -1,4 +1,7 @@
 <div class="notes-wrap">
     <span class="material-icons" routerLink='/workplace'> keyboard_arrow_left </span>
     <span class="material-icons" (click)="openAddNoteDialog()"> add_circle_outline </span>
+
+    <angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="htmlContent"></angular-editor>
+    <button (click)="test()">test</button>
 </div>

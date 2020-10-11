@@ -6,7 +6,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
   styleUrls: ['./note.component.scss']
 })
 export class NoteComponent implements OnInit {
-
+  htmlContent: any
   constructor(
     public dialog: MatDialog
   ) { }
@@ -16,9 +16,13 @@ export class NoteComponent implements OnInit {
 
   openAddNoteDialog(): void {
     const dialogRef = this.dialog.open(AddNoteDialog, {
-      width: '250px',
-      height: '400px',
+      panelClass: 'add-note-dialog'
     });
+  }
+
+  test() {
+    console.log(this.htmlContent);
+    
   }
 
 }
@@ -26,6 +30,7 @@ export class NoteComponent implements OnInit {
 @Component({
   selector: 'add-note-dialog',
   templateUrl: './add-note-dialog.html',
+  styleUrls: ['./note.component.scss']
 })
 export class AddNoteDialog {
 
