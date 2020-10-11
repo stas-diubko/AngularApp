@@ -3,6 +3,7 @@ import { CommonModule } from "@angular/common";
 import { WorkplaceComponent } from "./workplace.component";
 import { WorkplaceRoutingModule } from './worlplace-routing.module';
 import { MaterialModule } from '../modules/material.modules';
+import { NoteComponent } from './note/note.component';
 
 const COMPONENTS = [
     WorkplaceComponent
@@ -11,6 +12,7 @@ const COMPONENTS = [
 @NgModule({
     declarations: [
       COMPONENTS,
+      NoteComponent,
     ],
     imports: [
       CommonModule,

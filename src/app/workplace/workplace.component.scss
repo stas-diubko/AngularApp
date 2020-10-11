@@ -4,9 +4,17 @@
     align-items: center;
     justify-content: space-between;
 
+    button {
+        margin-right: 15px;
+    }
+
     div:nth-child(2) {
         span {
             cursor: pointer;
         }
     }
+}
+
+.workplace-wrap .workplace-wrap-content {
+    padding: 0 50px 50px;
 }
