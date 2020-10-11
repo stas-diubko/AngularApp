@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationHelper } from '../shared/helpers/authentication-helper';
 import { WorkplaceService } from 'src/app/core/services/workplace.service';
 import { Subscription } from 'rxjs';
+import { UserDataView } from '../shared/models/workplace/user-data.view';
+import { ResponseUserDataView } from '../shared/models/workplace/response/response-user-data.view';
 
 @Component({
   selector: 'app-workplace',
@@ -11,14 +13,18 @@ import { Subscription } from 'rxjs';
 
 export class WorkplaceComponent implements OnInit {
   userDataSubscription: Subscription;
-  userData:any;
+  userData: UserDataView = {
+    name: '',
+    surname: ''
+  };
 
   constructor(
     private authenticationHelper: AuthenticationHelper,
     private workplaceService: WorkplaceService
   ) {
-    this.userDataSubscription = this.workplaceService.userData$.subscribe(data => {
-      this.userData = data;
+    this.userDataSubscription = this.workplaceService.userData$.subscribe((data: ResponseUserDataView) => {
+      this.userData.name = data.name;
+      this.userData.surname = data.surname;
     });
   };
 

@@ -5,6 +5,7 @@ import { AuthenticationService } from 'src/app/core/services/authentication.serv
 import { ResponseSignupAuthenticationView } from 'src/app/shared/models/authentication/response/response-signup-authentication.view copy';
 import { RequestSignupAuthenticationView } from 'src/app/shared/models/authentication/request/request-signup-authentication.view copy';
 import { AuthenticationHelper } from 'src/app/shared/helpers/authentication-helper';
+import { RequestSignInAuthenticationView } from 'src/app/shared/models/authentication/request/request-signin-authentication.view';
 
 @Component({
   selector: 'app-sign-up',
@@ -42,7 +43,13 @@ export class SignUpComponent {
       password: this.registrationForm.controls.password.value
     };
     this.authenticationService.signUp(registarationData).subscribe((response: ResponseSignupAuthenticationView) => {
-      console.log(response);
+      const loginData: RequestSignInAuthenticationView = {
+        email: registarationData.email,
+        password: registarationData.password
+      };
+      this.authenticationService.signIn(loginData).subscribe(response => {
+        this.authenticationHelper.login(response.token);
+      });
     });
   }
 
