@@ -19,31 +19,22 @@
     }
 
     .auth-input {
-      width: 300px;
-      padding: 5px;
-      border-bottom: 1px solid rgb(211, 211, 211);
-      margin-bottom: 20px;
-      color: rgb(128, 128, 128);
+      width: 350px;
+      margin-bottom: 10px;
 
       .mat-form-field-appearance-fill .mat-form-field-flex {
         padding: 0;
       }
 
       .form-error {
-        margin: 10px 0;
+        margin: 0;
         color: rgb(255, 0, 0);
         font-size: 14px;
       }
-
-      
-    }
-    .error-border {
-      border-bottom: 1px solid rgb(255, 0, 0) !important;
     }
 
     button {
       width: 100px;
-      color: rgb(128, 128, 128);
       font-size: 16px;
       margin: 10px 0;
     }
