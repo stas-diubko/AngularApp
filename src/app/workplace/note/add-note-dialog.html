@@ -1,5 +1,6 @@
 <div mat-dialog-content >
     <div class="add-note-dialog">
-        <p>dialog</p>
+        <angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="htmlContent"></angular-editor>
+        <button (click)="test()">test</button>
     </div>
 </div>

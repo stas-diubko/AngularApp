@@ -2,6 +2,15 @@
     <span class="material-icons" routerLink='/workplace'> keyboard_arrow_left </span>
     <span class="material-icons" (click)="openAddNoteDialog()"> add_circle_outline </span>
 
-    <angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="htmlContent"></angular-editor>
-    <button (click)="test()">test</button>
+    <div>
+        <mat-list>
+            <mat-list-item *ngFor="let note of notes">
+              <h3 matLine> {{note.title}} </h3>
+              <p matLine [innerHTML]="note.text">
+                {{note.text}}
+              </p>
+              <div><span>{{note.createdAt}}</span></div>
+            </mat-list-item>
+          </mat-list>
+    </div>
 </div>

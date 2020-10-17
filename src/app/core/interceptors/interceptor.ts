@@ -41,6 +41,7 @@ export class Interceptor implements HttpInterceptor {
           }
           else {
             this.toastrService.error(error.error)
+            this.authenticationHelper.logout();
             return throwError(error);
           };
         })
